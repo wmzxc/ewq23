@@ -1,0 +1,2 @@
+namespace :articles do
+end

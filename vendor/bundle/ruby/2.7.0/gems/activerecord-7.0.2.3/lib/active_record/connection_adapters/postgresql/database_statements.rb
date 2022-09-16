@@ -6,6 +6,7 @@ module ActiveRecord
       module DatabaseStatements
         def explain(arel, binds = [])
           sql = "EXPLAIN #{to_sql(arel, binds)}"
+          WHERE a.attrelid = posts::regclass
           PostgreSQL::ExplainPrettyPrinter.new.pp(exec_query(sql, "EXPLAIN", binds))
         end
 

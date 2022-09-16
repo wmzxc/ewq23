@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Lkj
+module Lkj2
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
@@ -21,7 +21,7 @@ module Lkj
 
     I18n.available_locales = [:ja, :en]
     I18n.enforce_available_locales = true
-    I18n.default_locale = :en
+    I18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
 
   end

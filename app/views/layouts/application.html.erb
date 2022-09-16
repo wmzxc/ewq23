@@ -11,6 +11,23 @@
   </head>
 
   <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
+
+
+<body>
+  <heder>
+  　<nav>
+      <% if user_signed_in? %>
+        <%= link_to 'logout',
+        destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'sigh up', new_user_registration_path %>
+        <%= link_to 'login', new_user_session_path %>
+      <% end %>
+    </nav>
+  </header>
+  
